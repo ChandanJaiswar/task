@@ -16,7 +16,7 @@ use App\Http\Controllers\StudentController;
 
 //student Routes
 
-Route::get('/', function () {
+Route::get('/index', function () {
     return view('index');
 
 })->name('students.index');
@@ -39,7 +39,7 @@ Route::get('/create-teacher', function () {
 })->name('teachers.index');
 Route::post('/create-teacher', [StudentController::class, 'createteacher'])->name('teachers.store');
 
-Route::get('/login-teacher' ,function(){
+Route::get('/' ,function(){
     return view('teacher_login');
 })->name('login');
 
@@ -50,5 +50,5 @@ Route::post('logout', function () {
     request()->session()->invalidate(); // Invalidate session
     request()->session()->regenerateToken(); // Regenerate CSRF token
 
-    return redirect('/login-teacher'); // Redirect to login page
+    return redirect('/'); // Redirect to login page
 })->name('teacher.logout');
