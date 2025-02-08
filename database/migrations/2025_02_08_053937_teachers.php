@@ -1,5 +1,6 @@
 <?php
 
+use Database\Seeders\TeacherDataSeeder;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -22,6 +23,8 @@ return new class extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+        $teachers= new TeacherDataSeeder();
+       $teachers->run();
     }
 
     /**
