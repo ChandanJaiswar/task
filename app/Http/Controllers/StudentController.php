@@ -94,4 +94,6 @@ class StudentController extends Controller
         return redirect()->route('students.show')->with('success', 'Student deleted successfully.');
     }
 
+
+
 }

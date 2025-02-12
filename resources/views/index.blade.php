@@ -25,9 +25,11 @@
                     </tr>
                 </thead>
                 <tbody>
+                {{-- @dd($students); --}}
+                {{-- $i=1; --}}
                     @foreach ($students as $student)
                         <tr>
-                            <td>{{ $student->id }}</td>
+                            <td>{{$loop->iteration}}</td>
                             <td>{{ $student->student_name }}</td>
                             <td>{{ $student->class }}</td>
                             <td>{{ $student->teacher->name ?? 'N/A' }}</td>

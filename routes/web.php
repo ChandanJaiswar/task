@@ -32,7 +32,9 @@ Route::put('/update/{id}', [StudentController::class, 'update'])->name('students
 Route::delete('/delete/{id}', [StudentController::class, 'destroy'])->name('delete');
 
 });
-//teacher route
+
+
+//teacher routes
 
 Route::get('/create-teacher', function () {
     return view('createteacher');

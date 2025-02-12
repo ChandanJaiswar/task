@@ -29,4 +29,5 @@ class teachers extends Authenticatable
     {
         return $this->hasMany(students::class, 'class_teacher_id');
     }
+
 }
